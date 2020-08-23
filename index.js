@@ -24,24 +24,19 @@ document.getElementById("cal-body").addEventListener("click", function (e) {
 document.getElementById("submitId").addEventListener("click", function () {
   const generateScreen = document.querySelector("#generate-screen").value;
   const calScreen = document.getElementById("cal-screen").value;
-
+  let message = parseInt(document.getElementById("action-number").innerText);
   if (calScreen == generateScreen) {
     document.getElementById("success-message").style.display = "block";
     document.getElementById("error-message").style.display = "none";
   } else {
-    // for (let i = 1; i < 3; i++) {
-
     document.getElementById("error-message").style.display = "block";
     document.getElementById("success-message").style.display = "none";
-
-    //
-    let message = parseInt(document.getElementById("action-number").innerText);
-    let minusValue = message--;
-    console.log(minusValue);
-    if (minusValue == 0) {
+    if (message <= 0) {
       document.getElementById("submitId").disabled = true;
-      document.getElementById("action-number").innerText = minusValue;
+      document.getElementById("action-id").innerHTML =
+        "<h3>Attempt Failed</h3>";
+    } else {
+      document.getElementById("action-number").innerText = message - 1;
     }
-    // }
   }
 });
