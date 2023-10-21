@@ -8,6 +8,9 @@ body {
 .container {
   margin-top: 30px;
 }
+.form-control:disabled{
+  background: #10101b;
+}
 
 .half-width {
   height: 570px;
@@ -47,6 +50,7 @@ input[type="text"]:focus {
   color: #fff;
   font-size: 20px;
 }
+input[type="text"]
 .numbers {
   margin: 30px 0;
 }

@@ -1,9 +1,8 @@
-//Pin generate Part
+/*//Pin generate Part
 document.querySelector("#generate-pin").addEventListener("click", function () {
   const generatedPin = Math.floor(Math.random() * 9000) + 1000;
   document.querySelector("#generate-screen").value = generatedPin;
 });
-
 // Button Capturing Part
 document.getElementById("cal-body").addEventListener("click", function (e) {
   const inputButton = e.target.innerText;
@@ -40,3 +39,4 @@ document.getElementById("submitId").addEventListener("click", function () {
     }
   }
 });
+*/
